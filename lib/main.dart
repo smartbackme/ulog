@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_me/BaseDart.dart';
+import 'package:flutter_app_me/ImageShow.dart';
 import 'package:flutter_app_me/LifeFlutter.dart';
 import 'package:flutter_app_me/NullRouter.dart';
 import 'package:flutter_app_me/PageState.dart';
 import 'package:flutter_app_me/TipRouter.dart';
+import 'package:flutter_app_me/WidgetAndStyle.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
             case "tipRouter" : return TipRouter(text : settings.arguments as String);
             case "pageState" : return PageState(title : settings.arguments as String);
             case "LifeFlutter" : return LifeFlutter();
+            case "imageShow" : return ImageShow();
+            case "widgetAndStyle" : return WidgetAndStyle();
           }
           return NullRouter();
         });
@@ -81,10 +85,26 @@ class MyHomePage extends StatelessWidget {
               }, child: Text("状态管理"),),),
               Padding(padding: EdgeInsets.all(2),child:
               ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "widgetAndStyle");
+              }, child: Text("控件与样式"),),),
+              Padding(padding: EdgeInsets.all(2),child:
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "imageShow");
+              }, child: Text("图片展示"),),),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(padding: EdgeInsets.all(2),child:
+              ElevatedButton(onPressed: () {
+              }, child: Text("文本样式"),),),
+              Padding(padding: EdgeInsets.all(2),child:
+              ElevatedButton(onPressed: () {
               }, child: Text("按钮"),),),
               Padding(padding: EdgeInsets.all(2),child:
               ElevatedButton(onPressed: () {
-              }, child: Text("空间"),),),
+              }, child: Text("图片展示"),),),
             ],
           )
         ],
