@@ -9,6 +9,9 @@ import 'package:flutter_app_me/widget_and_style.dart';
 
 import 'layout_style.dart';
 import 'layout_style2.dart';
+import 'layout_style3.dart';
+import 'layout_style4.dart';
+import 'widget_style.dart';
 
 void main() {
   runApp(MyApp());
@@ -38,7 +41,10 @@ class MyApp extends StatelessWidget {
             case "imageShow" : return ImageShow();
             case "layoutStyle" : return LayoutStyle();
             case "layoutStyle2" : return LayoutStyle2();
+            case "layoutStyle3" : return LayoutStyle3();
+            case "layoutStyle4" : return LayoutStyle4();
             case "widgetAndStyle" : return WidgetAndStyle();
+            case "widget_style" : return WidgetStyle();
           }
           return NullRouter();
         });
@@ -94,7 +100,14 @@ class MyHomePage extends StatelessWidget {
 
               }, child: Text("布局2"),),
               ElevatedButton(onPressed: () {
-              }, child: Text("图片展示"),),
+                Navigator.pushNamed(context, "layoutStyle3");
+              }, child: Text("布局3"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "layoutStyle4");
+              }, child: Text("布局4"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "widget_style");
+              }, child: Text("组件"),),
             ],
           ),
         ],
