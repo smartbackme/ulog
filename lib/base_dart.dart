@@ -130,9 +130,16 @@ class BaseDartState extends State<BaseDart>{
 
 
     Future.wait([
-      Future.delayed(new Duration(seconds: 8),(){return "hello world";}),
-      Future.delayed(new Duration(seconds: 4),(){return "heheh";})
-    ]).then((value) => print(value[0]+value[1]));
+      Future.delayed(new Duration(seconds: 8),(){
+        print("hello world");
+        return "hello world";}),
+      Future.delayed(new Duration(seconds: 4),(){
+        print("heheh");
+        return "heheh";})
+    ]).then((value) {
+      print(value);
+      print(value[0]+value[1]);
+    });
     // final wordPair = new WordPair.random();
     // return new Text(wordPair.asPascalCase);
     return new Scaffold(

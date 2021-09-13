@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_me/BaseDart.dart';
-import 'package:flutter_app_me/ImageShow.dart';
-import 'package:flutter_app_me/LifeFlutter.dart';
-import 'package:flutter_app_me/NullRouter.dart';
-import 'package:flutter_app_me/PageState.dart';
-import 'package:flutter_app_me/TipRouter.dart';
-import 'package:flutter_app_me/WidgetAndStyle.dart';
+import 'package:flutter_app_me/base_dart.dart';
+import 'package:flutter_app_me/image_show.dart';
+import 'package:flutter_app_me/life_flutter.dart';
+import 'package:flutter_app_me/null_router.dart';
+import 'package:flutter_app_me/page_state.dart';
+import 'package:flutter_app_me/tip_router.dart';
+import 'package:flutter_app_me/widget_and_style.dart';
+
+import 'layout_style.dart';
+import 'layout_style2.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,6 +36,8 @@ class MyApp extends StatelessWidget {
             case "pageState" : return PageState(title : settings.arguments as String);
             case "LifeFlutter" : return LifeFlutter();
             case "imageShow" : return ImageShow();
+            case "layoutStyle" : return LayoutStyle();
+            case "layoutStyle2" : return LayoutStyle2();
             case "widgetAndStyle" : return WidgetAndStyle();
           }
           return NullRouter();
@@ -59,54 +64,39 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(spacing: 8.0,// 主轴(水平)方向间距
+          runSpacing: 4.0,// 纵轴（垂直）方向间距
+            alignment: WrapAlignment.start,
             children: <Widget>[
-              Padding(padding: EdgeInsets.all(2),child:
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "baseDart");
-              }, child: Text("dart基本语法"),),),
-              Padding(padding: EdgeInsets.all(2),child:
+              }, child: Text("dart基本语法"),),
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "tipRouter",arguments: "hi");
-              }, child: Text("路由管理"),),),
-              Padding(padding: EdgeInsets.all(2),child:
+              }, child: Text("路由管理"),),
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "LifeFlutter");
-              }, child: Text("生命周期分析"),),),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(padding: EdgeInsets.all(2),child:
+              }, child: Text("生命周期分析"),),
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "pageState",arguments: "状态管理");
-              }, child: Text("状态管理"),),),
-              Padding(padding: EdgeInsets.all(2),child:
+              }, child: Text("状态管理"),),
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "widgetAndStyle");
-              }, child: Text("控件与样式"),),),
-              Padding(padding: EdgeInsets.all(2),child:
+              }, child: Text("控件与样式"),),
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "imageShow");
-              }, child: Text("图片展示"),),),
+              }, child: Text("图片展示"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "layoutStyle");
+              }, child: Text("布局"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "layoutStyle2");
+
+              }, child: Text("布局2"),),
+              ElevatedButton(onPressed: () {
+              }, child: Text("图片展示"),),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Padding(padding: EdgeInsets.all(2),child:
-              ElevatedButton(onPressed: () {
-              }, child: Text("文本样式"),),),
-              Padding(padding: EdgeInsets.all(2),child:
-              ElevatedButton(onPressed: () {
-              }, child: Text("按钮"),),),
-              Padding(padding: EdgeInsets.all(2),child:
-              ElevatedButton(onPressed: () {
-              }, child: Text("图片展示"),),),
-            ],
-          )
         ],
       ),
     );
