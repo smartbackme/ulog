@@ -4,14 +4,21 @@ import 'package:flutter_app_me/image_show.dart';
 import 'package:flutter_app_me/life_flutter.dart';
 import 'package:flutter_app_me/null_router.dart';
 import 'package:flutter_app_me/page_state.dart';
+import 'package:flutter_app_me/scale_animation_route.dart';
 import 'package:flutter_app_me/tip_router.dart';
 import 'package:flutter_app_me/widget_and_style.dart';
 
+import 'gesture_detector_test.dart';
+import 'inherited_widget_test_route.dart';
 import 'layout_style.dart';
 import 'layout_style2.dart';
 import 'layout_style3.dart';
 import 'layout_style4.dart';
+import 'lizi_dart.dart';
+import 'notification_test.dart';
 import 'widget_style.dart';
+import 'no_ui_thread.dart';
+import 'pointer_event.dart';
 
 void main() {
   runApp(MyApp());
@@ -45,6 +52,13 @@ class MyApp extends StatelessWidget {
             case "layoutStyle4" : return LayoutStyle4();
             case "widgetAndStyle" : return WidgetAndStyle();
             case "widget_style" : return WidgetStyle();
+            case "lizi_dart" : return LiziDart();
+            case "inherited_widget_test_route" : return InheritedWidgetTestRoute();
+            case "no_ui_thread" : return NoUiThread();
+            case "pointer_event" : return PointerEventT();
+            case "gesture_detector_test" : return GestureDetectorTest();
+            case "notification_test" : return NotificationTest();
+            case "scale_animation_route" : return ScaleAnimationRoute();
           }
           return NullRouter();
         });
@@ -108,6 +122,27 @@ class MyHomePage extends StatelessWidget {
               ElevatedButton(onPressed: () {
                 Navigator.pushNamed(context, "widget_style");
               }, child: Text("组件"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "lizi_dart");
+              }, child: Text("例子"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "inherited_widget_test_route");
+              }, child: Text("数据共享"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "no_ui_thread");
+              }, child: Text("异步UI更新"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "pointer_event");
+              }, child: Text("指针事件"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "gesture_detector_test");
+              }, child: Text("手势识别"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "notification_test");
+              }, child: Text("通知"),),
+              ElevatedButton(onPressed: () {
+                Navigator.pushNamed(context, "scale_animation_route");
+              }, child: Text("动画"),),
             ],
           ),
         ],
