@@ -13,13 +13,21 @@ Imitate Android logger library  [logger](https://github.com/orhanobut/logger)
 
 ## start using
 
+dependencies:
+  flutter_ulog: ^0.0.1
+
 ```dart
+
 //Initialization
+class ConsoleAdapter extends ULogConsoleAdapter{
+  @override
+  bool isLoggable(ULogType type, String? tag) => true;
+}
     ULog.init((value){
       return ""; // your JSON parsing library
     });
 //Add a log adapter, which can be inherited to print different contents under different circumstances
-    ULog.addLogAdapter(ULogConsoleAdapter());
+    ULog.addLogAdapter(ConsoleAdapter());
 ```
 
 
