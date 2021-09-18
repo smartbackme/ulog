@@ -7,17 +7,17 @@
 <!-- [![Code size](https://img.shields.io/github/languages/code-size/leisim/logger?logo=github&logoColor=white)](https://github.com/leisim/logger) -->
 <!-- [![License](https://img.shields.io/github/license/leisim/logger?logo=open-source-initiative&logoColor=green)](https://github.com/leisim/logger/blob/master/LICENSE) -->
 
-Imitate Android logger library  [logger](https://github.com/orhanobut/logger)
+模倣 Android logger  [logger](https://github.com/orhanobut/logger)
 
 
-## start using
+## 使用を開始する
 
 ```dart
-//Initialization
+    // 初期化
     ULog.init((value){
-      return ""; // your JSON parsing library
+      return "";//あなたのjson解析ライブラリ
     });
-//Add a log adapter, which can be inherited to print different contents under different circumstances
+    // ログアダプタを追加すると、このアダプターを引き継ぎ、異なる場合には異なる内容を印刷することができます。
     ULog.addLogAdapter(ULogConsoleAdapter());
 ```
 
@@ -25,15 +25,15 @@ Imitate Android logger library  [logger](https://github.com/orhanobut/logger)
 
 ## Output
 
-Daily printing
+日常印刷
 ![](art/base_image.apk)
 
 ![](art/base_image2.apk)
 
-If a line exceeds 4000 characters, it will be automatically folded
+行が4000文字を超えると自動的に行を折ります。
 ![](art/base_image3.apk)
 
-## Log level
+## レベル
 
 
 ```dart
