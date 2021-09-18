@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'i_ulog_adapter.dart';
 import 'i_ulog_printer.dart';
-import 'ulog_config.dart';
 import 'ulog_lib_printer.dart';
 
 enum ULogType{
@@ -14,14 +13,17 @@ enum ULogType{
   error
 }
 
+typedef String? toJson(dynamic src);
+
 class ULog{
 
   static ULogPrinter printer = ULogLibPrinter();
 
-  static ULogConfig? config;
 
-  static void init(ULogConfig conf){
-    config = conf;
+  static toJson? tojson;
+
+  static void init(toJson? tojsonfun){
+    tojson = tojsonfun;
   }
 
   static void addLogAdapter(ULogAdapter adapter) {

@@ -14,7 +14,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+#  json_annotation: ^4.0.1
+#  build_runner: any
+#  json_serializable: any
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

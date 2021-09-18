@@ -136,8 +136,8 @@ class ULogLibPrinter implements ULogPrinter{
 
   @override
   void o(obj, { String? tag}) {
-    assert(ULog.config?.injectParser() != null);
-    json(ULog.config?.injectParser().toJson(obj)??"",tag: tag);
+    assert(ULog.tojson != null);
+    json(ULog.tojson!(obj)??"",tag: tag);
   }
 
   @override
