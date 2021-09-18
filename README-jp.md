@@ -12,10 +12,11 @@
 
 ## 使用を開始する
 
-dependencies:
-  flutter_ulog: ^0.0.1
+
 
 ```dart
+dependencies:
+  flutter_ulog: ^0.0.1
     // 初期化
     class ConsoleAdapter extends ULogConsoleAdapter{
       @override
