@@ -39,28 +39,28 @@ class ULog{
   }
 
   /// Log a message at level [ULogType.verbose].
-  static void v(dynamic message,{dynamic error, String? tag}){
-    _log(ULogType.verbose,message,error :error,tag: tag);
+  static void v(dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){
+    _log(ULogType.verbose,message,error :error,tag: tag,stackTrace: stackTrace);
   }
 
   /// Log a message at level [ULogType.debug].
-  static void d(dynamic message,{dynamic error, String? tag}){
-    _log(ULogType.debug,message,error :error,tag: tag);
+  static void d(dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){
+    _log(ULogType.debug,message,error :error,tag: tag,stackTrace: stackTrace);
   }
 
   /// Log a message at level [ULogType.info].
-  static void i(dynamic message,{dynamic error, String? tag}){
-    _log(ULogType.info,message,error :error,tag: tag);
+  static void i(dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){
+    _log(ULogType.info,message,error :error,tag: tag,stackTrace: stackTrace);
   }
 
   /// Log a message at level [ULogType.warning].
-  static void w(dynamic message,{dynamic error, String? tag}){
-    _log(ULogType.warning,message,error :error,tag: tag);
+  static void w(dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){
+    _log(ULogType.warning,message,error :error,tag: tag,stackTrace: stackTrace);
   }
 
   /// Log a message at level [ULogType.error].
-  static void e(dynamic message,{dynamic error, String? tag}){
-    _log(ULogType.error,message,error :error,tag: tag);
+  static void e(dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){
+    _log(ULogType.error,message,error :error,tag: tag,stackTrace: stackTrace);
   }
 
   static void json(String json,{String? tag}) {
@@ -76,8 +76,8 @@ class ULog{
   }
 
 
-  static void _log(ULogType type,dynamic message,{dynamic error, String? tag}){
-    printer.log(type,message,error: error,tag: tag);
+  static void _log(ULogType type,dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){
+    printer.log(type,message,error: error,tag: tag,stackTrace: stackTrace);
   }
 
 }

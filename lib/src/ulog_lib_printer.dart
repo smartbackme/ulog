@@ -104,13 +104,17 @@ class ULogLibPrinter implements ULogPrinter{
   }
 
   @override
-  void log(ULogType type, message, {error,  String? tag}) {
+  void log(ULogType type, message, {error, StackTrace? stackTrace, String? tag}) {
     var msg = stringifyMessage(message);
     var emsg = "";
     if(error!=null){
       emsg = '\n${error.toString()}';
     }
-    var str = msg + emsg;
+    var stmsg = "";
+    if(stackTrace!=null){
+      stmsg = '\n${stackTrace.toString()}';
+    }
+    var str = msg + emsg + stmsg;
     _logAdapters.forEach((element) {
       if(element.isLoggable(type, tag)){
         element.log(type,tag,str.toString());
