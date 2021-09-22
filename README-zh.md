@@ -35,12 +35,12 @@ dependencies:
 ## Output
 
 日常打印
-![](art/base_image.apk)
+![](art/base_image.png)
 
-![](art/base_image2.apk)
+![](art/base_image2.png)
 
 一行超过4000字符自动折行
-![](art/base_image3.apk)
+![](art/base_image3.png)
 
 ## 日志等级
 

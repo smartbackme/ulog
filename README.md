@@ -35,12 +35,12 @@ class ConsoleAdapter extends ULogConsoleAdapter{
 ## Output
 
 Daily printing
-![](art/base_image.apk)
+![](art/base_image.png)
 
-![](art/base_image2.apk)
+![](art/base_image2.png)
 
 If a line exceeds 4000 characters, it will be automatically folded
-![](art/base_image3.apk)
+![](art/base_image3.png)
 
 ## Log level
 

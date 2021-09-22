@@ -34,12 +34,12 @@ dependencies:
 ## Output
 
 日常印刷
-![](art/base_image.apk)
+![](art/base_image.png)
 
-![](art/base_image2.apk)
+![](art/base_image2.png)
 
 行が4000文字を超えると自動的に行を折ります。
-![](art/base_image3.apk)
+![](art/base_image3.png)
 
 ## レベル
 
