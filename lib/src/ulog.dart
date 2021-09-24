@@ -13,18 +13,18 @@ enum ULogType{
   error
 }
 
-typedef String? toJson(dynamic src);
+// typedef String? toJson(dynamic src);
 
 class ULog{
 
   static ULogPrinter printer = ULogLibPrinter();
 
 
-  static toJson? tojson;
-
-  static void init(toJson? tojsonfun){
-    tojson = tojsonfun;
-  }
+  // static toJson? tojson;
+  //
+  // static void init(toJson? tojsonfun){
+  //   tojson = tojsonfun;
+  // }
 
   static void addLogAdapter(ULogAdapter adapter) {
     printer.addAdapter(adapter);
@@ -71,9 +71,9 @@ class ULog{
   //   printer.xml(xml,tag:tag);
   // }
 
-  static void o(dynamic obj,{String? tag}) {
-    printer.o(obj,tag: tag);
-  }
+  // static void o(dynamic obj,{String? tag}) {
+  //   printer.o(obj,tag: tag);
+  // }
 
 
   static void _log(ULogType type,dynamic message,{dynamic error, StackTrace? stackTrace, String? tag}){

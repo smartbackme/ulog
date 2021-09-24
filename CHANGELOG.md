@@ -5,3 +5,7 @@
 ## 0.0.2
 
 - add log stackTrace
+
+## 0.0.3
+
+- remove ulog.o(),remove init json func

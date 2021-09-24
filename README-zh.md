@@ -17,15 +17,12 @@
 
 ```dart
 dependencies:
-  flutter_ulog: ^0.0.2
+  flutter_ulog: ^0.0.3
     // 初始化
         class ConsoleAdapter extends ULogConsoleAdapter{
           @override
           bool isLoggable(ULogType type, String? tag) => true;
         }
-    ULog.init((value){
-      return "";//你的json 解析库
-    });
     // 添加日志适配器，可以继承该适配器，来达到不同情况下打印不同内容
     ULog.addLogAdapter(ULogConsoleAdapter());
 ```

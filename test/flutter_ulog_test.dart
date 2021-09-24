@@ -33,9 +33,9 @@ Object toEncodableFallback(dynamic object) {
 }
 void main() {
   test('adds one to input values', () {
-    ULog.init((value){
-      return ;
-    });
+    // ULog.init((value){
+    //   return ;
+    // });
     ULog.addLogAdapter(consoleAdapter());
     ULog.v("12321321\ndfafdasfdsa\ndafdasf");
     ULog.d("12321321");

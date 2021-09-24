@@ -138,11 +138,11 @@ class ULogLibPrinter implements ULogPrinter{
     }
   }
 
-  @override
-  void o(obj, { String? tag}) {
-    assert(ULog.tojson != null);
-    json(ULog.tojson!(obj)??"",tag: tag);
-  }
+  // @override
+  // void o(obj, { String? tag}) {
+  //   assert(ULog.tojson != null);
+  //   json(ULog.tojson!(obj)??"",tag: tag);
+  // }
 
   @override
   void removeLogAdapters(ULogAdapter adapter) {

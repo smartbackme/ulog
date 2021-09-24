@@ -9,7 +9,7 @@ abstract class ULogPrinter{
   void addAdapter(ULogAdapter adapter);
   void removeLogAdapters(ULogAdapter  adapter);
   // void xml(String xml,{String? tag});
-  void o(dynamic obj,{String? tag});
+  // void o(dynamic obj,{String? tag});
   void json(String json,{String? tag});
   void log(ULogType type,dynamic message,{dynamic error, StackTrace? stackTrace, String? tag});
 }

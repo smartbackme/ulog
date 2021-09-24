@@ -6,3 +6,4 @@ export 'package:flutter_ulog/src/i_ulog_printer.dart';
 export 'package:flutter_ulog/src/ulog.dart';
 export 'package:flutter_ulog/src/ulog_console_adapter.dart';
 export 'package:flutter_ulog/src/ulog_lib_printer.dart';
+export 'package:flutter_ulog/src/ulog_lib_console_format_strategy.dart';
