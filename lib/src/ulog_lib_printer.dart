@@ -37,11 +37,11 @@ class ULogLibPrinter implements ULogPrinter{
       var j = json.trim();
       if (j.startsWith("{")) {
         Map<String, dynamic> decode = JsonCodec().decode(json);
-        log(ULogType.debug, _convert(decode, JSON_INDENT));
+        log(ULogType.debug, _convert(decode, JSON_INDENT),tag: tag);
       }
       if (j.startsWith("[")) {
         List decode = JsonCodec().decode(json);
-        log(ULogType.debug, _convert(decode, JSON_INDENT,isObject: true));
+        log(ULogType.debug, _convert(decode, JSON_INDENT,isObject: true),tag: tag);
       }
     }
   }

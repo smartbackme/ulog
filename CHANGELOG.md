@@ -9,3 +9,7 @@
 ## 0.0.3
 
 - remove ulog.o(),remove init json func
+
+## 0.0.4
+
+- fixbug json tag
