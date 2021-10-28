@@ -70,8 +70,9 @@ class ULogLibConsoleFormatStrategy implements ULogFormatStrategy{
     var tag = _formatTag(onceOnlyTag);
     _logTopBorder(type, tag,time);
     _logHeaderContent(type, tag ,time);
-    List<int> bytes = utf8.encode(message!);
-    var length = bytes.length;
+    // List<int> bytes = utf8.encode(message!);
+    // var length = bytes.length;
+    var length = message!.length;
     if (length <= chunkSize) {
       if (config._stackDeep > 0) {
         _logDivider(type, tag,time);
@@ -84,7 +85,7 @@ class ULogLibConsoleFormatStrategy implements ULogFormatStrategy{
       }
       for (int i = 0; i < length; i += chunkSize) {
         int count =  (length - i)<chunkSize? (length - i):chunkSize;
-        _logContent(type, tag, time, utf8.decode(bytes.sublist(i,count+i)));
+        _logContent(type, tag, time, message.substring(i,count+i));
       }
       _logBottomBorder(type, tag ,time);
     }

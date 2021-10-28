@@ -13,3 +13,7 @@
 ## 0.0.4
 
 - fixbug json tag
+
+## 0.0.5
+
+- fixbug message utf-8

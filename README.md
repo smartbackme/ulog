@@ -17,7 +17,7 @@ Imitate Android logger library  [logger](https://github.com/orhanobut/logger)
 
 ```dart
 dependencies:
-  flutter_ulog: ^0.0.4
+  flutter_ulog: ^0.0.5
 //Initialization
 class ConsoleAdapter extends ULogConsoleAdapter{
   @override

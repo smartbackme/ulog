@@ -16,7 +16,7 @@
 
 ```dart
 dependencies:
-  flutter_ulog: ^0.0.4
+  flutter_ulog: ^0.0.5
     // 初期化
     class ConsoleAdapter extends ULogConsoleAdapter{
       @override
